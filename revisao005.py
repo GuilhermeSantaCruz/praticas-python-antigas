@@ -6,5 +6,7 @@ for c in range(1, 5):
     if idade > maisvelho:
         maisvelho = idade
         nomemaisvelho = nome
-    sexo = input("Qual o sexo? [M/F] ").strip().upper() [0]    
+    sexo = input("Qual o sexo? [M/F] ").strip().upper()[0]
+    while sexo not in "MF":
+        sexo = input("Qual o sexo? [M/F] ").strip().upper()[0]        
 print(f'E a pessoa mais velha entrevistada foi {nomemaisvelho} com {maisvelho} anos.')
