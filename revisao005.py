@@ -16,7 +16,8 @@ for c in range(1, 8):
             nomemaisnovo = nome
         if idade > maisvelho:
             maisvelho = idade
-            nomemaisvelho = nome    
+            nomemaisvelho = nome 
+    salario = float(input(f'Qual o seu salário {nome}? R$'))           
     sexo = input("Qual o sexo? [M/F] ").strip().upper()[0]
     while sexo not in "MF":
         sexo = input("Qual o sexo? [M/F] ").strip().upper()[0] 
@@ -30,4 +31,3 @@ print(f'E a pessoa mais velha entrevistada foi {nomemaisvelho} com {maisvelho} a
 print(f'Tivemos um total de {tothomens} homens entrevistados.')
 print(f'Tivemos um total de {totmulheres} mulheres entrevistadas.')
 print(f'A idade média das pessoas entrevistadas é de {mediaidade:.1f} anos.')
-
