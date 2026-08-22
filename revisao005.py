@@ -4,11 +4,14 @@ nomemaisvelho = ""
 nomemaisnovo = ""
 somaidade = 0
 somasal = 0
-for c in range(1, 8):
+contpess = 0
+resp = "S"
+while resp != "N":
     nome = input("Digite seu nome: ")
+    contpess += 1
     idade = int(input(f"Qual a idade de {nome}? "))
     somaidade += idade
-    if c == 1:
+    if contpess == 1:
         maisvelho = maisnovo = idade
         nomemaisnovo = nomemaisvelho = nome
     else:
@@ -27,11 +30,15 @@ for c in range(1, 8):
         tothomens += 1
     if sexo == "F":
         totmulheres += 1   
-mediaidade = somaidade / 7  
-mediasal = somasal / 7      
+    resp = input('Quer continuar? [S/N] ').strip().upper()[0]
+    while resp not in "SN":
+        resp = input('Quer continuar? [S/N] ').strip().upper()[0]
+mediaidade = somaidade / contpess  
+mediasal = somasal / contpess 
+print(f'Tivemos um total de {contpess} pessoas entrevistadas.')    
 print(f'E a pessoa mais nova entrevistada foi {nomemaisnovo} com {maisnovo} anos.')                    
 print(f'E a pessoa mais velha entrevistada foi {nomemaisvelho} com {maisvelho} anos.')
 print(f'Tivemos um total de {tothomens} homens entrevistados.')
 print(f'Tivemos um total de {totmulheres} mulheres entrevistadas.')
 print(f'A idade média das pessoas entrevistadas é de {mediaidade:.1f} anos.')
-print(f'A média salárial dos entrevistados é R${mediasal:.2f}')
+print(f'A média salarial dos entrevistados é R${mediasal:.2f}')
