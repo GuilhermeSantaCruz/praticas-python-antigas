@@ -5,8 +5,10 @@ nomemaisnovo = ""
 somaidade = 0
 somasal = 0
 contpess = 0
+maiorsal = 0
 resp = "S"
 while resp != "N":
+
     nome = input("Digite seu nome: ")
     contpess += 1
     idade = int(input(f"Qual a idade de {nome}? "))
@@ -21,7 +23,9 @@ while resp != "N":
         if idade > maisvelho:
             maisvelho = idade
             nomemaisvelho = nome 
-    salario = float(input(f'Qual o seu salário {nome}? R$'))  
+    salario = float(input(f'Qual o seu salário {nome}? R$')) 
+    if salario > maiorsal:
+        maiorsal = salario 
     somasal += salario        
     sexo = input("Qual o sexo? [M/F] ").strip().upper()[0]
     while sexo not in "MF":
@@ -42,3 +46,4 @@ print(f'Tivemos um total de {tothomens} homens entrevistados.')
 print(f'Tivemos um total de {totmulheres} mulheres entrevistadas.')
 print(f'A idade média das pessoas entrevistadas é de {mediaidade:.1f} anos.')
 print(f'A média salarial dos entrevistados é R${mediasal:.2f}')
+print(f'E o maior salário entre os entrevistados foi R${maiorsal:.2f}')
