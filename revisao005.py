@@ -4,7 +4,6 @@ nomemaisvelho = ""
 nomemaisnovo = ""
 somaidade = 0
 somasal = 0
-maiorsal = 0
 for c in range(1, 8):
     nome = input("Digite seu nome: ")
     idade = int(input(f"Qual a idade de {nome}? "))
@@ -20,8 +19,13 @@ for c in range(1, 8):
             maisvelho = idade
             nomemaisvelho = nome 
     salario = float(input(f'Qual o seu salário {nome}? R$')) 
-    if salario > maiorsal:
-        maiorsal = salario 
+    if c == 1:
+        menorsal = maiorsal = salario 
+    else:
+        if salario < menorsal:
+            menorsal = salario
+        if salario > maiorsal:
+            maiorsal = salario        
     somasal += salario        
     sexo = input("Qual o sexo? [M/F] ").strip().upper()[0]
     while sexo not in "MF":
@@ -38,4 +42,5 @@ print(f'Tivemos um total de {tothomens} homens entrevistados.')
 print(f'Tivemos um total de {totmulheres} mulheres entrevistadas.')
 print(f'A idade média das pessoas entrevistadas é de {mediaidade:.1f} anos.')
 print(f'A média salarial dos entrevistados é R${mediasal:.2f}')
+print(f'O menor salário entre os entrevistados foi R${menorsal:.2f}')
 print(f'E o maior salário entre os entrevistados foi R${maiorsal:.2f}')
