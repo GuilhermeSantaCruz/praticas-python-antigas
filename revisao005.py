@@ -5,6 +5,7 @@ nomemaisnovo = ""
 somaidade = 0
 somasal = 0
 contpess = 0
+nomemenorsal = ""
 nomemaiorsal = ""
 resp = "S"
 while resp != "N":
@@ -25,10 +26,11 @@ while resp != "N":
     salario = float(input(f'Qual o seu salário {nome}? R$')) 
     if contpess == 1:
         menorsal = maiorsal = salario 
-        nomemaiorsal = nome
+        nomemaiorsal = nomemenorsal = nome
     else:
         if salario < menorsal:
             menorsal = salario
+            nomemenorsal = nome
         if salario > maiorsal:
             maiorsal = salario
             nomemaiorsal = nome        
@@ -52,5 +54,5 @@ print(f'Tivemos um total de {tothomens} homens entrevistados.')
 print(f'Tivemos um total de {totmulheres} mulheres entrevistadas.')
 print(f'A idade média das pessoas entrevistadas é de {mediaidade:.1f} anos.')
 print(f'A média salarial dos entrevistados é R${mediasal:.2f}')
-print(f'O menor salário entre os entrevistados foi R${menorsal:.2f}')
+print(f'O menor salário entre os entrevistados foi de {nomemenorsal} que é R${menorsal:.2f}')
 print(f'E o maior salário entre os entrevistados foi de {nomemaiorsal} que é R${maiorsal:.2f}')
