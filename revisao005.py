@@ -42,6 +42,7 @@ while resp != "N":
         tothomens += 1
     if sexo == "F":
         totmulheres += 1   
+    escolaridade = input('Qual é o seu nível de escolaridade? ')    
     resp = input('Quer continuar? [S/N] ').strip().upper()[0]
     while resp not in "SN":
         resp = input('Quer continuar? [S/N] ').strip().upper()[0]
