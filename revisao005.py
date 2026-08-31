@@ -49,8 +49,8 @@ while resp != "N":
 mediaidade = somaidade / contpess  
 mediasal = somasal / contpess 
 print(f'Tivemos um total de {contpess} pessoas entrevistadas.')    
-print(f'E a pessoa mais nova entrevistada foi {nomemaisnovo} com {maisnovo} anos.')                    
-print(f'E a pessoa mais velha entrevistada foi {nomemaisvelho} com {maisvelho} anos.')
+print(f'A pessoa mais nova entrevistada foi {nomemaisnovo} com {maisnovo} anos.')                    
+print(f'A pessoa mais velha entrevistada foi {nomemaisvelho} com {maisvelho} anos.')
 print(f'Tivemos um total de {tothomens} homens entrevistados.')
 print(f'Tivemos um total de {totmulheres} mulheres entrevistadas.')
 print(f'A idade média das pessoas entrevistadas é de {mediaidade:.1f} anos.')
