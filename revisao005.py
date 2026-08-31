@@ -48,7 +48,7 @@ while resp != "N":
         resp = input('Quer continuar? [S/N] ').strip().upper()[0]
 mediaidade = somaidade / contpess  
 mediasal = somasal / contpess 
-print(f'Tivemos um total de {contpess} pessoas entrevistadas.')    
+print(f'Total de {contpess} pessoas foram entrevistadas.')    
 print(f'A pessoa mais nova entrevistada foi {nomemaisnovo} com {maisnovo} anos.')                    
 print(f'A pessoa mais velha entrevistada foi {nomemaisvelho} com {maisvelho} anos.')
 print(f'Tivemos um total de {tothomens} homens entrevistados.')
