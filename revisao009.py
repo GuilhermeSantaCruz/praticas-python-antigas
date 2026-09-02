@@ -5,6 +5,7 @@ num = (int(input("Digite um número: ")),
 print(num, end=" ")
 print(f"\nO número 9 apareceu {num.count(9)} vezes ")
 print(f'A soma dos valores é {sum(num)}')
+print(f'O maior número da lista num é {max(num)}')
 if 3 in num:
        print(f"O número 3 apareceu ma {num.index(3)+1}ª posição. ")
 else:
