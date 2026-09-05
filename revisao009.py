@@ -1,4 +1,5 @@
-numpar = 0
+contpar = 0
+contimpar = 0
 num = (int(input("Digite um número: ")),
        int(input("Digite outro número: ")),
        int(input("Digite mais um número: ")),
@@ -15,7 +16,10 @@ else:
 print("Os números pares digitados foram: ", end="")
 for n in num:
        if n % 2 == 0:
-              numpar += 1
+              contpar += 1
               print(n, end=" ")
+       else:
+              contimpar += 1       
 print()              
-print(f'E na tupla num tem {numpar} números pares.')
+print(f'Na tupla num tem {contpar} números pares')
+print(f'E {contimpar} números ímpares.')
