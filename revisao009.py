@@ -9,6 +9,7 @@ print(f"\nO número 9 apareceu {num.count(9)} vezes ")
 print(f'A soma dos valores é {sum(num)}')
 print(f'Os números da tupla num em ordem crescente são: {sorted(num)}')
 print(f'O maior número da tupla num é {max(num)} e apareceu {num.count(max(num))} vezes.')
+print(f'Ele apareceu pela primeira vez na {num.index(max(num))+1}ª posição.')
 print(f'O menor número da tupla num é {min(num)} e ele apareceu na {num.index(min(num))+1}ª posição')
 if 3 in num:
        print(f"O número 3 apareceu na {num.index(3)+1}ª posição. ")
