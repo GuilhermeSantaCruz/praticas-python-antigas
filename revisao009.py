@@ -1,5 +1,6 @@
 contpar = 0
 contimpar = 0
+maiorpar = 0
 num = (int(input("Digite um número: ")),
        int(input("Digite outro número: ")),
        int(input("Digite mais um número: ")),
@@ -20,8 +21,12 @@ for n in num:
        if n % 2 == 0:
               contpar += 1
               print(n, end=" ")
+              if n > maiorpar:
+                     maiorpar = n    
        else:
-              contimpar += 1       
+              contimpar += 1 
+                    
 print()              
 print(f'Na tupla num tem {contpar} números pares')
+print(f'O maior par da tupla num é: {maiorpar}')
 print(f'E {contimpar} números ímpares.')
