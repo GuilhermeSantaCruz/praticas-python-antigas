@@ -1,5 +1,6 @@
-contpar = 0
 contimpar = 0
+numpar = []
+contpar = 0
 maiorpar = 0
 num = (int(input("Digite um número: ")),
        int(input("Digite outro número: ")),
@@ -16,17 +17,19 @@ if 3 in num:
        print(f"O número 3 apareceu na {num.index(3)+1}ª posição. ")
 else:
        print("O número 3 não apareceu em nenhuma posição. ")       
-print("Os números pares digitados foram: ", end="")
 for n in num:
        if n % 2 == 0:
-              contpar += 1
-              print(n, end=" ")
-              if n > maiorpar:
-                     maiorpar = n    
+              numpar.append(n)              
        else:
               contimpar += 1 
-                    
-print()              
-print(f'Na tupla num tem {contpar} números pares')
-print(f'O maior par da tupla num é: {maiorpar}')
-print(f'E {contimpar} números ímpares.')
+for p in numpar:
+       contpar += 1
+       if p > maiorpar:
+              maiorpar = p                
+if maiorpar > 0:
+       print(f'Os números pares digitados foram: {numpar}')
+       print(f'Foram digitados {contpar} números pares')
+       print(f'O maior par da tupla num é: {maiorpar}')
+else:
+       print('Não foi digitado nenhum número PAR.')                                         
+print(f'E na tupla num tem {contimpar} números ímpares.')
