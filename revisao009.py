@@ -1,7 +1,6 @@
 contimpar = 0
 numpar = []
 contpar = 0
-maiorpar = 0
 totpar = 0
 num = (int(input("Digite um número: ")),
        int(input("Digite outro número: ")),
@@ -26,9 +25,11 @@ for n in num:
 for p in numpar:
        contpar += 1
        totpar += p
+       if contpar == 1:
+              maiorpar = p
        if p > maiorpar:
-              maiorpar = p                
-if maiorpar > 0:
+              maiorpar = p
+if contpar > 0:
        print(f'Os números pares digitados foram: {numpar}')
        print(f'Foram digitados {contpar} números pares')
        print(f'O maior par da tupla num é: {maiorpar}')
