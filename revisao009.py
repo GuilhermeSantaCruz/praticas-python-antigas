@@ -2,6 +2,7 @@ contimpar = 0
 numpar = []
 contpar = 0
 totpar = 0
+mediapar = 0
 num = (int(input("Digite um número: ")),
        int(input("Digite outro número: ")),
        int(input("Digite mais um número: ")),
@@ -28,12 +29,14 @@ for p in numpar:
        if contpar == 1:
               maiorpar = p
        if p > maiorpar:
-              maiorpar = p
+              maiorpar = p             
 if contpar > 0:
+       mediapar = totpar / contpar 
        print(f'Os números pares digitados foram: {numpar}')
        print(f'Foram digitados {contpar} números pares')
        print(f'O maior par da tupla num é: {maiorpar}')
        print(f'A soma dos números pares é {totpar}')
+       print(f'A média dos pares digitados é {mediapar}')
 else:
        print('Não foi digitado nenhum número PAR.')                                         
 print(f'E na tupla num tem {contimpar} números ímpares.')
