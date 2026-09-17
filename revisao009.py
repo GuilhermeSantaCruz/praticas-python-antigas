@@ -3,6 +3,7 @@ numpar = []
 contpar = 0
 totpar = 0
 mediapar = 0
+acimamedia = []
 num = (int(input("Digite um número: ")),
        int(input("Digite outro número: ")),
        int(input("Digite mais um número: ")),
@@ -15,7 +16,11 @@ print(f'O maior número da tupla num é {max(num)} e apareceu {num.count(max(num
 print(f'Ele apareceu pela primeira vez na {num.index(max(num))+1}ª posição.')
 print(f'O menor número da tupla num é {min(num)} e ele apareceu na {num.index(min(num))+1}ª posição')
 medianum = sum(num) / len(num)
+for n in num:
+       if n > medianum:
+              acimamedia.append(n) 
 print(f'A média dos valores da tupla num é {medianum}')
+print(f'Tem {len(acimamedia)} valor(es) acima da média, que são {acimamedia}')
 if 3 in num:
        print(f"O número 3 apareceu na {num.index(3)+1}ª posição. ")
 else:
