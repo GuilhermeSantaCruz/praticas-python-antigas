@@ -12,6 +12,8 @@ for n in range(1, 6):
 print(f"Na lista num tem {contpar} valores PARES!") 
 print(f'Na lista num tem {contimpar} valores ÍMPARES')   
 print(f"Os números digitados foram {num}")
+print(f'O MENOR número digitado da lista num é {min(num)}')
+print(f"O Maior número digitado da lista num é {max(num)}")
 for v in num:
     if v > 10:
         contmaiorX += 1
